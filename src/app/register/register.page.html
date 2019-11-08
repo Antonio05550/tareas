@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <form>
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="0" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Registro</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input name="email" type="email" [(ngModel)]="user.email" placeholder="Correo electronico" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input name="password" type="password" [(ngModel)]="user.password" placeholder="Password" required></ion-input>
+              </ion-item>
+          </div>
+          <div padding>
+            <ion-button color="primary" size="large" (click)="onRegister()" expand="block">Register</ion-button>
+          </div>
+          <div>
+            <a routerLink='/login'>Iniciar sesión!</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

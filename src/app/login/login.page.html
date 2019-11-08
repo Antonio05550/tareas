@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <form>
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Login</h3>
+
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input name="email" type="email" [(ngModel)]="user.email" placeholder="ejemplo@dominio.com" required>
+
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input name="password" type="password" [(ngModel)]="user.password" placeholder="Contraseña" required>
+
+              </ion-input>
+            </ion-item>
+
+          </div>
+          <div paddign>
+            <ion-button (click)="onLogin()" expand="block">Login</ion-button>
+
+          </div>
+          <div>
+            <ion-button expand="block" size="large" color="primary" (click)="onLoginGoogle()">
+              Google
+            </ion-button>
+            <ion-button expand="block" size="large" color="secondary" (click)="onLoginGit()">
+              GitHub
+            </ion-button>
+            
+
+          </div>
+          <div text-center>
+            <a routerLink="/register">Crear cuenta!</a>
+          </div>
+       
+
+
+        </ion-col>
+
+      </ion-row>
+
+
+    </ion-grid>
+
+
+
+
+
+
+
+
+  </form>
+
+
+</ion-content>
