@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
     const user = await this.authSvc.onLogin(this.user);
     if(user){
       console.log('successfully logged user');
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/tabs');
     }else{
       const alert = await this.alertCtrl.create({
         header: 'Datos incorrectos',
